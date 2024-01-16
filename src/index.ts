@@ -1,20 +1,15 @@
 import express from 'express';
 import * as config from './config';
+import path from 'path';
 
 const app = express();
+const baseDir = process.cwd();
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(baseDir, 'src/views'));
 
 app.get('/', (req, res) => {
-	res.send(`
-<html>
-	<head>
-		<title>Info Site</title>
-	</head>
-	<body>
-		<h1>Info Site</h1>
-		<p>Welcome to this site at Render.</p>
-	</body>
-</html>			
-			`);
+	res.render('pages/index');
 });
 
 app.listen(config.getPort(), () => {
