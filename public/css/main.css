@@ -3,3 +3,16 @@ body {
 	padding: 0 1rem;
 	font-family: sans-serif;
 }
+
+nav {
+	display: flex;
+	gap: .5rem;
+	background-color: #bbb;
+	padding: .5rem;
+	margin-bottom: 1rem;
+}
+
+nav a {
+	text-decoration: none;
+	color: navy;
+}
