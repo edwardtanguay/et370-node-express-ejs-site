@@ -14,5 +14,10 @@ nav {
 
 nav a {
 	text-decoration: none;
-	color: navy;
+	color: #111;
+}
+
+nav a.active {
+	color: brown;
+	font-weight: bold;
 }

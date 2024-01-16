@@ -8,7 +8,7 @@
 
 <body>
 	<%- include('../partials/header') %>
-	<%- include('../partials/menu') %>
+	<%- include('../partials/menu', {pageIdCode: 'books'}) %>
 	<div>
 		There are <%=books.length%> books:
 			<ul>
