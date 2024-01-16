@@ -11,7 +11,15 @@ app.set('views', path.join(baseDir, 'src/views'));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.render('pages/index', { books: model.getBooks() });
+	res.render('pages/welcome', { books: model.getBooks() });
+});
+
+app.get('/books', (req, res) => {
+	res.render('pages/books', {});
+});
+
+app.get('/about', (req, res) => {
+	res.render('pages/about', {});
 });
 
 app.listen(config.getPort(), () => {

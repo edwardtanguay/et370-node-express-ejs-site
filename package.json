@@ -13,7 +13,7 @@
 			"src"
 		],
 		"ext": "ts, json",
-		"exec": "tsx src/index.ts"
+		"exec": "tsx src/server.ts"
 	},
 	"keywords": [],
 	"author": "",
