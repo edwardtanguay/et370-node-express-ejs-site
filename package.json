@@ -10,7 +10,7 @@
 	},
 	"nodemonConfig": {
 		"watch": [
-			"backend"
+			"src"
 		],
 		"ext": "ts, json",
 		"exec": "tsx src/index.ts"
