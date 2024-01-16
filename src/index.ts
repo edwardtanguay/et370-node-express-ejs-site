@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 	</head>
 	<body>
 		<h1>Info Site</h1>
-		<p>Welcome to this site.</p>
+		<p>Welcome to this site at Render.</p>
 	</body>
 </html>			
 			`);
