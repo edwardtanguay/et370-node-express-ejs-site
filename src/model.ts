@@ -2,7 +2,7 @@ import axios from 'axios';
 import { IBook } from './interfaces';
 
 export const getBooks = async () => {
-	return new Promise(async (resolve, reject) => {
+	return new Promise<IBook[]>(async (resolve, reject) => {
 		try {
 			const response = await axios.get('https://edwardtanguay.vercel.app/share/books.json');
 			const rawBooks: any[] = response.data;

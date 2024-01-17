@@ -3,6 +3,7 @@
 
 <head>
 	<%- include('../partials/htmlHead') %>
+	<link rel="stylesheet" href="css/main.css" />
 	<title>Info Site</title>
 </head>
 
@@ -13,7 +14,9 @@
 		<p>There are <%=books.length%> books:</p>
 			<div class="books">
 				<% books.forEach(function(book) { %>
-					<img src="images/books/<%=book.idCode%>.png" title="<%=book.title.toUpperCase()%>: <%=book.description%>"/>
+					<a href="/book/<%=book.idCode%>">
+						<img src="images/books/<%=book.idCode%>.png"/>
+					</a>
 				<% }) %>
 			</div>
 	</div>

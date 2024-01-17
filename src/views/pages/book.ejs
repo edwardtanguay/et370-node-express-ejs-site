@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<%- include('../partials/htmlHead') %>
+	<link rel="stylesheet" href="../css/main.css" />
+	<title>Info Site</title>
+</head>
+
+<body>
+	<%- include('../partials/header') %>
+	<%- include('../partials/menu', {pageIdCode: 'book'}) %>
+	<div class="book">
+		<img src="../images/books/<%=book.idCode%>.png" />
+		<div>
+			<p class="title"><%=book.title%></p>
+			<p class="description"><%=book.description%></p>
+		</div>
+	</div>
+</body>
+
+</html>

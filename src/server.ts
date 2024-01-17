@@ -22,12 +22,23 @@ app.get('/books', async (req, res) => {
 	res.render('pages/books', { books: await model.getBooks() });
 });
 
+app.get('/book/:idCode', async (req, res) => {
+	const idCode = req.params.idCode;
+	const books = await model.getBooks();
+	const book = books.find(m => m.idCode === idCode);
+	if (book) {
+		res.render('pages/book', { book });
+	} else {
+		res.status(404).render('pages/404');
+	}
+});
+
 app.get('/about', (req, res) => {
 	res.render('pages/about');
 });
 
 app.get('*', (req, res) => {
-  res.status(404).render('pages/404');
+	res.status(404).render('pages/404');
 });
 
 app.listen(config.getPort(), () => {
