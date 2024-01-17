@@ -4,6 +4,9 @@
 <head>
 	<%- include('../partials/htmlHead') %>
 	<link rel="stylesheet" href="../css/main.css" />
+	<meta property="og:title" content="<%=book.title%>"/>
+	<meta property="og:description" content="<%=book.description%>"/>
+	<meta property="og:image" content="https://et370-node-express-ejs-site.onrender.com/images/books/<%=book.idCode%>.png"/>
 	<title>Info Site</title>
 </head>
 
