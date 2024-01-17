@@ -18,8 +18,8 @@ app.get('/welcome', (req, res) => {
 	res.render('pages/welcome');
 });
 
-app.get('/books', (req, res) => {
-	res.render('pages/books', { books: model.getBooks() });
+app.get('/books', async (req, res) => {
+	res.render('pages/books', { books: await model.getBooks() });
 });
 
 app.get('/about', (req, res) => {
