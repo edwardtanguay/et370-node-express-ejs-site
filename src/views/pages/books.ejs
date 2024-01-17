@@ -10,12 +10,12 @@
 	<%- include('../partials/header') %>
 	<%- include('../partials/menu', {pageIdCode: 'books'}) %>
 	<div>
-		There are <%=books.length%> books:
-			<ul>
+		<p>There are <%=books.length%> books:</p>
+			<div class="books">
 				<% books.forEach(function(book) { %>
-				<li><%= book.title %></li>
+					<img src="images/books/<%=book.idCode%>.png" title="<%=book.title.toUpperCase()%>: <%=book.description%>"/>
 				<% }) %>
-			</ul>
+			</div>
 	</div>
 </body>
 
