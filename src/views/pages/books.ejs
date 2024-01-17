@@ -13,7 +13,7 @@
 	<%- include('../partials/header') %>
 	<%- include('../partials/menu', {pageIdCode: 'books'}) %>
 	<div>
-		<p>There are my <%=books.length%> books:</p>
+		<p>These are my <%=books.length%> books:</p>
 			<div class="books">
 				<% books.forEach(function(book) { %>
 					<a href="/book/<%=book.idCode%>">
