@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
 	res.render('pages/welcome');
 });
 
+app.get('/welcome', (req, res) => {
+	res.render('pages/welcome');
+});
+
 app.get('/books', (req, res) => {
 	res.render('pages/books', { books: model.getBooks() });
 });
